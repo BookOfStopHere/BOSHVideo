@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2F0F417B1F79035300194BD1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0F417A1F79035300194BD1 /* libsqlite3.tbd */; };
 		2F0F417D1F79036000194BD1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0F417C1F79036000194BD1 /* CoreTelephony.framework */; };
+		2F0F41811F792A2D00194BD1 /* BOSHFomatFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F41801F792A2D00194BD1 /* BOSHFomatFactory.m */; };
+		2F0F41B71F7935E800194BD1 /* SSVideoWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F41B61F7935E800194BD1 /* SSVideoWriter.m */; };
 		2F68A1221F74E98C0048A825 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68A1211F74E98C0048A825 /* main.m */; };
 		2F68A1251F74E98C0048A825 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68A1241F74E98C0048A825 /* AppDelegate.m */; };
 		2F68A1281F74E98C0048A825 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68A1271F74E98C0048A825 /* ViewController.m */; };
@@ -38,6 +40,11 @@
 		29E340CDC0BB5BDE2EC6F438 /* Pods-BOSHVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BOSHVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BOSHVideo/Pods-BOSHVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		2F0F417A1F79035300194BD1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2F0F417C1F79036000194BD1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		2F0F417F1F792A2D00194BD1 /* BOSHFomatFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOSHFomatFactory.h; sourceTree = "<group>"; };
+		2F0F41801F792A2D00194BD1 /* BOSHFomatFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOSHFomatFactory.m; sourceTree = "<group>"; };
+		2F0F41831F79306D00194BD1 /* BOSDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOSDefines.h; sourceTree = "<group>"; };
+		2F0F41B51F7935E800194BD1 /* SSVideoWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVideoWriter.h; sourceTree = "<group>"; };
+		2F0F41B61F7935E800194BD1 /* SSVideoWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVideoWriter.m; sourceTree = "<group>"; };
 		2F68A11D1F74E98C0048A825 /* BOSHVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BOSHVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F68A1211F74E98C0048A825 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F68A1231F74E98C0048A825 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F0F417E1F792A1200194BD1 /* VideoCodec */ = {
+			isa = PBXGroup;
+			children = (
+				2F0F417F1F792A2D00194BD1 /* BOSHFomatFactory.h */,
+				2F0F41801F792A2D00194BD1 /* BOSHFomatFactory.m */,
+			);
+			path = VideoCodec;
+			sourceTree = "<group>";
+		};
+		2F0F41821F79304E00194BD1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2F0F41831F79306D00194BD1 /* BOSDefines.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		2F68A1141F74E98C0048A825 = {
 			isa = PBXGroup;
 			children = (
@@ -123,13 +147,14 @@
 		2F68A11F1F74E98C0048A825 /* BOSHVideo */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F41821F79304E00194BD1 /* Common */,
+				2F0F417E1F792A1200194BD1 /* VideoCodec */,
 				2F68A1B01F78E62B0048A825 /* Utils */,
 				2F68A1401F750B220048A825 /* External */,
 				2F68A13D1F750AF10048A825 /* VideoTools */,
 				2F68A1371F750A8B0048A825 /* Camara */,
 				2F68A1381F750A8B0048A825 /* Filter */,
 				2F68A1391F750A8B0048A825 /* VideoEditor */,
-				2F68A13A1F750A8B0048A825 /* VideoEncoder */,
 				2F68A13B1F750A8B0048A825 /* VideoPlayer */,
 				2F68A13C1F750A8B0048A825 /* VideoWriter */,
 				2F68A1231F74E98C0048A825 /* AppDelegate.h */,
@@ -176,13 +201,6 @@
 			path = VideoEditor;
 			sourceTree = "<group>";
 		};
-		2F68A13A1F750A8B0048A825 /* VideoEncoder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VideoEncoder;
-			sourceTree = "<group>";
-		};
 		2F68A13B1F750A8B0048A825 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +211,8 @@
 		2F68A13C1F750A8B0048A825 /* VideoWriter */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F41B51F7935E800194BD1 /* SSVideoWriter.h */,
+				2F0F41B61F7935E800194BD1 /* SSVideoWriter.m */,
 			);
 			path = VideoWriter;
 			sourceTree = "<group>";
@@ -459,7 +479,9 @@
 			files = (
 				2F68A1281F74E98C0048A825 /* ViewController.m in Sources */,
 				2F68A1251F74E98C0048A825 /* AppDelegate.m in Sources */,
+				2F0F41811F792A2D00194BD1 /* BOSHFomatFactory.m in Sources */,
 				2F68A1AF1F78E1090048A825 /* BOSHGIFContext.m in Sources */,
+				2F0F41B71F7935E800194BD1 /* SSVideoWriter.m in Sources */,
 				2F68A1B31F78E6400048A825 /* BOSHUtils.m in Sources */,
 				2F68A1B61F78E7E40048A825 /* BOSHVideoThumbCtx.m in Sources */,
 				2F68A1221F74E98C0048A825 /* main.m in Sources */,
