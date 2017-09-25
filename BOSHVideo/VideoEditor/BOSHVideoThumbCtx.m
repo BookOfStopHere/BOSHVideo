@@ -1,0 +1,66 @@
+//
+//  BOSHVideoThumbCtx.m
+//  BOSHVideo
+//
+//  Created by yang on 2017/9/25.
+//  Copyright © 2017年 yang. All rights reserved.
+//
+
+#import "BOSHVideoThumbCtx.h"
+
+@implementation BOSHVideoThumbCtx
+
++ (BOSHVideoThumbCtx *)thumbCtxWithVideo:(NSURL *)url
+{
+    if(url)
+    {
+        BOSHVideoThumbCtx *ctx = BOSHVideoThumbCtx.new;
+         AVURLAsset *asset =  [[AVURLAsset alloc] initWithURL:url options:nil];
+        ctx->_asset = asset;
+        ctx->_duration = asset.duration.value*1.0f/asset.duration.timescale;
+        ctx->_frames = asset.duration.value;
+        
+        NSArray *videoTracks = [asset tracksWithMediaType:AVMediaTypeVideo];
+        AVAssetTrack *videoTrack = [videoTracks firstObject];
+        ctx->_videoSize = videoTrack.naturalSize;
+    }
+    return nil;
+}
+
+- (UIImage *)thumbImageAtTime:(NSTimeInterval)time
+{
+    //字典@{AVURLAssetPreferPreciseDurationAndTimingKey:@(YES/NO),AVURLAssetReferenceRestrictionsKey} 计算duration 是否精确，精确比较费时，传空默认不精确
+    NSParameterAssert(_asset);
+    NSArray *videoTracks = [_asset tracksWithMediaType:AVMediaTypeVideo];
+    if([videoTracks count] > 0)
+    {
+        AVAssetImageGenerator *generator = [[AVAssetImageGenerator alloc]initWithAsset:_asset];
+        generator.appliesPreferredTrackTransform = YES;//截图时调整正确的方向
+        
+        CMTime cmtime = CMTimeMakeWithSeconds(time, _asset.duration.timescale);//
+        CGImageRef imageRef = [generator copyCGImageAtTime:cmtime actualTime:nil error:nil];
+        UIImage *captureImage = [UIImage imageWithCGImage:imageRef];
+        return captureImage;
+    }
+    return nil;
+}
+
+- (void)thumbImageWithFPS:(NSInteger)fps completionHandler:(void(^)(UIImage *image))handler
+{
+    //计算
+    NSTimeInterval duration = self.duration;//时长
+    NSInteger frames = duration*_asset.duration.timescale;//帧数
+    NSInteger newFrames = duration * fps;
+    
+    @autoreleasepool {
+        for(int ii =0; ii < newFrames; ii ++)
+        {
+            if(handler)
+            {
+                handler([self thumbImageAtTime:ii / (fps + 0.0)]);
+            }
+        }
+    }
+}
+
+@end
