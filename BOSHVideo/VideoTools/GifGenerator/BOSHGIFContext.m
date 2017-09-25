@@ -10,6 +10,7 @@
 #import <ImageIO/ImageIO.h>
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
+#import "BOSHVideoThumbCtx.h"
 
 @implementation BOSHGIFContext
 
@@ -29,69 +30,61 @@
 }
 
 
-- (void)makeVideo:(NSURL *)videoURL toGif:(NSString *)gifPath inQueue:(dispatch_queue_t)queue completion:(void(^)(NSError *erro))completion
+- (void)makeVideo:(NSURL *)videoURL toGif:(NSString *)gifPath inQueue:(dispatch_queue_t)queue completion:(void(^)(NSError *erro, NSData *gif))completion
 {
-    dispatch_queue_t cQueue = queue;
     if(queue == nil)  queue = dispatch_get_main_queue();
-    
-    
-//    dispatch_async(queue, ^{
-//        
-//        //先按时间生成缩略图，计算图片的长度 然后再逐个加入，最终生成GIF
-//        
-//        
+
+    dispatch_async(queue, ^{
+        
+        //先按时间生成缩略图，计算图片的长度 然后再逐个加入，最终生成GIF
+        __block NSMutableArray *images = [NSMutableArray array];
+
+        BOSHVideoThumbCtx *thumbCtx  = [BOSHVideoThumbCtx thumbCtxWithVideo:videoURL];
+        [thumbCtx thumbImagesWithFPS:30 atTime:100 duration:0.5 completionHandler:^(UIImage *image){
+            [images  addObject:image];
+        }];
+        
 //        NSMutableData* imgData = [NSMutableData data];
-//        CGImageDestinationRef destination =  CGImageDestinationCreateWithData((__bridge CFMutableDataRef)imgData, kUTTypeGIF, imgs.count, NULL);
-//        
-//        NSString* path = [[[DataCenter sharedDataCenter] getLibraryPath] stringByAppendingPathComponent:@"test.gif"];
-//        CFURLRef url = CFURLCreateWithFileSystemPath (
-//                                                      kCFAllocatorDefault,
-//                                                      (CFStringRef)path,
-//                                                      kCFURLPOSIXPathStyle,
-//                                                      false);
-//        destination = CGImageDestinationCreateWithURL(url, kUTTypeGIF, imgs.count, NULL);
-//        NSDictionary *frameProperties = [NSDictionary
-//                                         dictionaryWithObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:duration], (NSString *)kCGImagePropertyGIFDelayTime, nil]
-//                                         forKey:(NSString *)kCGImagePropertyGIFDictionary];
-//        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:2];
-//        [dict setObject:[NSNumber numberWithBool:YES] forKey:(NSString*)kCGImagePropertyGIFHasGlobalColorMap];
-//        [dict setObject:(NSString *)kCGImagePropertyColorModelRGB forKey:(NSString *)kCGImagePropertyColorModel];
-//        [dict setObject:[NSNumber numberWithInt:8] forKey:(NSString*)kCGImagePropertyDepth];
-//        [dict setObject:[NSNumber numberWithInt:0] forKey:(NSString *)kCGImagePropertyGIFLoopCount];
-//        NSDictionary *gifProperties = [NSDictionary dictionaryWithObject:dict
-//                                                                  forKey:(NSString *)kCGImagePropertyGIFDictionary];
-//        for (UIImage* dImg in imgs)
-//        {
-//            UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, size.height), FALSE, 1);
-//            UIView* gifBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-//            gifBgView.backgroundColor = [UIColor clearColor];
-//            UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-//            [imgView setBackgroundColor:[UIColor clearColor]];
-//            [imgView setContentMode:UIViewContentModeScaleAspectFill];
-//            [imgView setImage:self.image];
-//            imgView.center = gifBgView.center;
-//            [gifBgView addSubview:imgView];
-//            
-//            UIImageView* dImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-//            dImgView.center = imgView.center;
-//            [dImgView setBackgroundColor:[UIColor clearColor]];
-//            [dImgView setImage:dImg];
-//            [dImgView setContentMode:UIViewContentModeScaleAspectFill];
-//            [gifBgView addSubview:dImgView];
-//            
-//            [[gifBgView layer] renderInContext:UIGraphicsGetCurrentContext()];
-//            
-//            UIImage* img = UIGraphicsGetImageFromCurrentImageContext();
-//            UIGraphicsEndImageContext();
-//            CGImageDestinationAddImage(destination, img.CGImage, (__bridge CFDictionaryRef)frameProperties);
-//        }
-//        CGImageDestinationSetProperties(destination, (__bridge CFDictionaryRef)gifProperties);
-//        CGImageDestinationFinalize(destination);
-//        CFRelease(destination);
-//        imgData = [NSData dataWithContentsOfFile:[[[DataCenter sharedDataCenter] getLibraryPath] stringByAppendingPathComponent:@"test.gif"]];
-//        return imgData;
-//
-//    });
+//        CGImageDestinationRef destination =  CGImageDestinationCreateWithData((__bridge CFMutableDataRef)imgData, kUTTypeGIF, 30, NULL);
+
+        CFURLRef url = CFURLCreateWithFileSystemPath (
+                                                      kCFAllocatorDefault,
+                                                      (CFStringRef)gifPath,
+                                                      kCFURLPOSIXPathStyle,
+                                                      false);
+        CGImageDestinationRef destination = CGImageDestinationCreateWithURL(url, kUTTypeGIF, 15, NULL);
+        
+        NSDictionary *frameProperties = [NSDictionary
+                                         dictionaryWithObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:1.0/30], (NSString *)kCGImagePropertyGIFDelayTime, nil]
+                                         forKey:(NSString *)kCGImagePropertyGIFDictionary];
+        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:2];
+        [dict setObject:[NSNumber numberWithBool:YES] forKey:(NSString*)kCGImagePropertyGIFHasGlobalColorMap];
+        [dict setObject:(NSString *)kCGImagePropertyColorModelRGB forKey:(NSString *)kCGImagePropertyColorModel];
+        [dict setObject:[NSNumber numberWithInt:8] forKey:(NSString*)kCGImagePropertyDepth];
+        [dict setObject:[NSNumber numberWithInt:0] forKey:(NSString *)kCGImagePropertyGIFLoopCount];
+        NSDictionary *gifProperties = [NSDictionary dictionaryWithObject:dict
+                                                                  forKey:(NSString *)kCGImagePropertyGIFDictionary];
+        for (UIImage* dImg in images)
+        {
+            CGImageDestinationAddImage(destination, dImg.CGImage, (__bridge CFDictionaryRef)frameProperties);
+        }
+        CGImageDestinationSetProperties(destination, (__bridge CFDictionaryRef)gifProperties);
+        CGImageDestinationFinalize(destination);
+        CFRelease(destination);
+        NSData *gif  = [NSData dataWithContentsOfFile:gifPath];
+        
+        if(completion)
+        {
+            if(gif)
+            {
+                completion(nil,gif);
+            }
+            else
+            {
+                completion([NSError errorWithDomain:@"com.bosh.video" code:-1000 userInfo:nil],gif);
+            }
+        }
+    });
 }
 
 @end

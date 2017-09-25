@@ -10,6 +10,7 @@ platform :ios, '8.0'
 
 target 'BOSHVideo' do
 	pod 'SVProgressHUD'
+	pod 'SDWebImage', '3.7.6'
 end
 
 post_install do |installer_representation|

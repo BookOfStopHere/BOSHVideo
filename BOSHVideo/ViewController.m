@@ -8,10 +8,15 @@
 
 #import "ViewController.h"
 #import "BOSHVideoThumbCtx.h"
+#import "BOSHGIFContext.h"
+#import "BOSHUtils.h"
+#import "UIImage+GIF.h"
 
 @interface ViewController ()
 {
     UIScrollView *scroll ;BOSHVideoThumbCtx *ctx;
+    
+    UIImageView *imageView;
 }
 @end
 
@@ -20,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 200)];
+    [self.view addSubview:imageView];
     
     scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 200)];
     scroll.layer.borderWidth = 2;
@@ -43,7 +50,14 @@
     
     scroll.contentSize = CGSizeMake(x_offset, 200);
     
+    
+    
+    [[BOSHGIFContext currentContext] makeVideo:[[NSBundle mainBundle] URLForResource:@"112169" withExtension:@"mp4"] toGif:[[BOSHUtils libraryPath] stringByAppendingPathComponent:@"k.gif"] inQueue:nil completion:^(NSError *erro, NSData *gif) {
+        imageView.image = [UIImage sd_animatedGIFWithData:gif];
+    }];
+    
 }
+
 
 
 - (void)didReceiveMemoryWarning {

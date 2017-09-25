@@ -33,6 +33,6 @@
  * 将视频专程GIF，默认在主线程上执行
  */
 
-- (void)makeVideo:(NSURL *)videoURL toGif:(NSString *)gifPath inQueue:(dispatch_queue_t)queue completion:(void(^)(NSError *erro))completion;
+- (void)makeVideo:(NSURL *)videoURL toGif:(NSString *)gifPath inQueue:(dispatch_queue_t)queue completion:(void(^)(NSError *erro, NSData *gif))completion;
 
 @end
