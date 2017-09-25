@@ -22,11 +22,13 @@
 @property (nonatomic, readonly) CGSize videoSize;
 @property (nonatomic, readonly) NSInteger frames;
 
+@property (nonatomic, readonly) float nominalFrameRate;
+
 
 + (BOSHVideoThumbCtx *)thumbCtxWithVideo:(NSURL *)url;
 
 - (UIImage *)thumbImageAtTime:(NSTimeInterval)time;
 
-- (void)thumbImageWithFPS:(NSInteger)fps completionHandler:(void(^)(UIImage *image))handler;
+- (void)thumbImagesWithFPS:(NSInteger)fps atTime:(NSTimeInterval)time  duration:(NSTimeInterval)duration completionHandler:(void(^)(UIImage *image))handler;
 
 @end

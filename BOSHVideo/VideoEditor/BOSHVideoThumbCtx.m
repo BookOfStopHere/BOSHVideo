@@ -18,11 +18,15 @@
          AVURLAsset *asset =  [[AVURLAsset alloc] initWithURL:url options:nil];
         ctx->_asset = asset;
         ctx->_duration = asset.duration.value*1.0f/asset.duration.timescale;
-        ctx->_frames = asset.duration.value;
         
+        //计算帧率、帧数
         NSArray *videoTracks = [asset tracksWithMediaType:AVMediaTypeVideo];
         AVAssetTrack *videoTrack = [videoTracks firstObject];
         ctx->_videoSize = videoTrack.naturalSize;
+        ctx->_nominalFrameRate = videoTrack.nominalFrameRate;
+        ctx->_frames = ctx->_duration*ctx->_nominalFrameRate;
+        
+        return ctx;
     }
     return nil;
 }
@@ -45,19 +49,18 @@
     return nil;
 }
 
-- (void)thumbImageWithFPS:(NSInteger)fps completionHandler:(void(^)(UIImage *image))handler
+- (void)thumbImagesWithFPS:(NSInteger)fps atTime:(NSTimeInterval)time  duration:(NSTimeInterval)duration completionHandler:(void(^)(UIImage *image))handler
 {
     //计算
-    NSTimeInterval duration = self.duration;//时长
-    NSInteger frames = duration*_asset.duration.timescale;//帧数
-    NSInteger newFrames = duration * fps;
-    
+    NSUInteger newFrames = (NSUInteger)(duration * fps);
+    newFrames = MIN(newFrames, (NSUInteger)((self.duration - time) *  self.nominalFrameRate));
+
     @autoreleasepool {
         for(int ii =0; ii < newFrames; ii ++)
         {
             if(handler)
             {
-                handler([self thumbImageAtTime:ii / (fps + 0.0)]);
+                handler([self thumbImageAtTime:(time + ii / (fps + 0.0))]);
             }
         }
     }
