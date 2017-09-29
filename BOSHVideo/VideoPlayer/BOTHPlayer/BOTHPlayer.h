@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BOTHPlaybackProtocol.h"
 
-@interface BOTHPlayer : NSObject
+@interface BOTHPlayer : NSObject <BOTHPlaybackProtocol>
+
+
 
 @end

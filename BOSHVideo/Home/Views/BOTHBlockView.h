@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BOTHBlockView : UIView
+@interface BOTHBlockView : UIButton
+@property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UILabel *textLab;
 
 @end

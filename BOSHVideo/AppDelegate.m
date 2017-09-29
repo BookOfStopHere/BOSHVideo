@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
  #import <Bugly/Bugly.h>
+#import "BOTHLaunchEngine.h"
+
+
+
 
 @interface AppDelegate ()
 
@@ -18,6 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [BOTHLaunchEngine launchingWithOptions:launchOptions];
     return YES;
 }
 

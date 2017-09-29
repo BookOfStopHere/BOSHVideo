@@ -3,7 +3,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (QNGeometry)
+@interface UIView (Geometry)
 /**
  * Shortcut for frame.origin.x.
  *

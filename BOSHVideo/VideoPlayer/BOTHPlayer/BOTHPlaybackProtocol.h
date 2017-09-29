@@ -8,6 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BOTHPlaybackProtocol : NSObject
+@class BOTHPlayerItem;
+
+@protocol BOTHPlaybackProtocol <NSObject>
+
+@required
+
+- (void)playWithItem:(BOTHPlayerItem *)playItem;
+
+- (void)play;
+
+- (void)pause;
+
+- (void)seekTo:(double)time completion:(void(^)(BOOL success, NSError *erro))handler;
+
+- (void)stop;
 
 @end
+
+
+

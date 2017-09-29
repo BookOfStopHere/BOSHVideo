@@ -10,4 +10,6 @@
 
 @interface BOTHLaunchEngine : NSObject
 
++ (BOOL) launchingWithOptions:(NSDictionary *)launchOptions;
+
 @end

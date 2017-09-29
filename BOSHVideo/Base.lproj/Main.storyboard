@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,21 +22,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClX-Ag-IYS">
-                                <rect key="frame" x="164" y="28" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClX-Ag-IYS">
+                                <rect key="frame" x="313" y="28" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.47114569604332079" green="1" blue="0.5919284990505761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Is2-eA-q9f"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avq-of-hlD">
+                                <rect key="frame" x="40" y="28" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="c3B-S8-eoi"/>
+                                    <constraint firstAttribute="height" constant="90" id="xdU-1q-6bM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="click2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQF-nD-gzA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ClX-Ag-IYS" secondAttribute="trailing" constant="10" id="A05-fs-6lQ"/>
+                            <constraint firstItem="Avq-of-hlD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="h6k-dT-UKj"/>
+                            <constraint firstItem="Avq-of-hlD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hYF-Tf-9je"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>

@@ -25,3 +25,15 @@ typedef enum {
 #else
 #define BLog(...)
 #endif
+
+
+#define BOSHIMG(A) [UIImage imageNamed:@A]
+
+//事件类型
+typedef enum{
+    BOSH_ACTION_JOIN_LONG_PICTURE = 0,//拼长图
+    BOSH_ACTION_CREATE_GIF,
+    BOSH_ACTION_EDIT_VIDEO,
+    BOSH_ACTION_HELP,
+    BOSH_ACTION_LAUNCH_CAMARA,
+};

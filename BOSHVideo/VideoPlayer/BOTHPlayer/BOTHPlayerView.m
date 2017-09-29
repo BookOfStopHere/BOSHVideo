@@ -7,15 +7,46 @@
 //
 
 #import "BOTHPlayerView.h"
+#import <AVFoundation/AVFoundation.h>
+#import "BOTHPlayer.h"
+
+@interface BOTHPlayerView ()
+
+@property (nonatomic, strong) BOTHPlayer *player;
+
+@end
 
 @implementation BOTHPlayerView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (Class)layerClass
+{
+    return AVPlayerLayer.class;
 }
-*/
+
+- (void)playWithItem:(BOTHPlayerItem *)playItem
+{
+    
+}
+
+- (void)play
+{
+    //
+}
+
+- (void)pause
+{
+    //
+}
+
+- (void)seekTo:(double)time completion:(void(^)(BOOL success, NSError *erro))handler
+{
+    //
+}
+
+- (void)stop
+{
+    
+}
+
 
 @end

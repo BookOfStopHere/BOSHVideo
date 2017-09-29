@@ -10,4 +10,7 @@
 
 @interface BOTHRichButton : UIButton
 
+@property (nonatomic, strong) UIImageView *iconView;
+@property (nonatomic, strong) UILabel *teextLab;
+
 @end

@@ -7,8 +7,14 @@
 //
 
 #import "BOSHHomeViewController.h"
+#import "BOTHBlockView.h"
+#import "UIView+Geometry.h"
+#import "BOSDefines.h"
+#import "BOSHHomeLayoutManager.h"
 
 @interface BOSHHomeViewController ()
+
+@property (nonatomic, strong) BOSHHomeLayoutManager *layout;
 
 @end
 
@@ -28,7 +34,9 @@
 
 - (void)loadView
 {
-    
+    self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.layout = [[BOSHHomeLayoutManager alloc] initWithTarget:self.view model:@[]];
 }
 /*
 #pragma mark - Navigation

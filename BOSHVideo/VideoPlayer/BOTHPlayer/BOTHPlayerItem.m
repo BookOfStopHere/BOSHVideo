@@ -10,4 +10,12 @@
 
 @implementation BOTHPlayerItem
 
++ (BOTHPlayerItem *)defaultItem
+{
+    BOTHPlayerItem *item = BOTHPlayerItem.new;
+    item.endTime = -1;
+    item.speedRate = 1;
+    return item;
+}
+
 @end

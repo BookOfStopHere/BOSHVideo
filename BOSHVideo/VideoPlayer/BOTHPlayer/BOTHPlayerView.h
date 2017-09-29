@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BOTHPlayerView : UIView
+#import "BOTHPlayer.h"
+
+@interface BOTHPlayerView : UIView <BOTHPlaybackProtocol>
+
+
+
+- (void)setPlayer:(BOTHPlayer *)player;
 
 @end
