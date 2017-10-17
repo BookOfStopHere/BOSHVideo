@@ -7,6 +7,7 @@
 //
 
 #import "BOTHPlayerItem.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation BOTHPlayerItem
 

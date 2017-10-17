@@ -30,6 +30,16 @@
 		2F68A1B31F78E6400048A825 /* BOSHUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68A1B21F78E6400048A825 /* BOSHUtils.m */; };
 		2F68A1B61F78E7E40048A825 /* BOSHVideoThumbCtx.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68A1B51F78E7E40048A825 /* BOSHVideoThumbCtx.m */; };
 		2F68A1B81F78FC520048A825 /* 112169.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2F68A1B71F78FC520048A825 /* 112169.mp4 */; };
+		2FD8DCE21F95DE600074CBDE /* UIImage+VideoThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8DCE11F95DE600074CBDE /* UIImage+VideoThumb.m */; };
+		2FD8DD051F95ECDB0074CBDE /* AVPlayerItem+ThumbImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8DCFB1F95ECDB0074CBDE /* AVPlayerItem+ThumbImage.m */; };
+		2FD8DD061F95ECDB0074CBDE /* AVPlayerItemVideoOutput+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8DCFD1F95ECDB0074CBDE /* AVPlayerItemVideoOutput+UIImage.m */; };
+		2FD8DD071F95ECDB0074CBDE /* BOTHPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8DD001F95ECDB0074CBDE /* BOTHPlayer.m */; };
+		2FD8DD081F95ECDB0074CBDE /* BOTHPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8DD021F95ECDB0074CBDE /* BOTHPlayerItem.m */; };
+		2FD8DD091F95ECDB0074CBDE /* BOTHPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8DD041F95ECDB0074CBDE /* BOTHPlayerView.m */; };
+		2FD8DD0A1F960B750074CBDE /* SSPlayControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE44F821F7E382500D77635 /* SSPlayControl.m */; };
+		2FD8DD0B1F960B780074CBDE /* SSProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE44F841F7E382500D77635 /* SSProgressBar.m */; };
+		2FD8DD0C1F960B7A0074CBDE /* SSSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE44F861F7E382500D77635 /* SSSlider.m */; };
+		2FD8DD0F1F9610FC0074CBDE /* BOSHCamaraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8DD0E1F9610FC0074CBDE /* BOSHCamaraViewController.m */; };
 		2FE44F401F7BD34B00D77635 /* UIView+Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE44F3F1F7BD34B00D77635 /* UIView+Geometry.m */; };
 		2FE44F431F7BD66C00D77635 /* BOSHHomeLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE44F421F7BD66C00D77635 /* BOSHHomeLayoutManager.m */; };
 		2FE44F6B1F7BE71F00D77635 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE44F461F7BE71F00D77635 /* MOBFoundation.framework */; };
@@ -53,15 +63,12 @@
 		2FE44F7D1F7BE71F00D77635 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2FE44F641F7BE71F00D77635 /* README.txt */; };
 		2FE44F7E1F7BE71F00D77635 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FE44F691F7BE71F00D77635 /* ShareSDK.bundle */; };
 		2FE44F7F1F7BE71F00D77635 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE44F6A1F7BE71F00D77635 /* ShareSDKConnector.framework */; };
-		2FE44F8A1F7E3A2300D77635 /* BOTHPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE44F891F7E3A2300D77635 /* BOTHPlayer.m */; };
 		2FFC4B831F7BACAE00A7FD4E /* BOTHRichButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFC4B821F7BACAE00A7FD4E /* BOTHRichButton.m */; };
 		2FFC4B851F7BEC0100A7FD4E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC4B841F7BEC0100A7FD4E /* libicucore.tbd */; };
 		2FFC4B871F7BEC3300A7FD4E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC4B861F7BEC3300A7FD4E /* libstdc++.tbd */; };
 		2FFC4B891F7BEC3D00A7FD4E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC4B881F7BEC3D00A7FD4E /* JavaScriptCore.framework */; };
 		2FFC4B8B1F7BEC5200A7FD4E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC4B8A1F7BEC5200A7FD4E /* ImageIO.framework */; };
 		2FFC4B8E1F7BECF300A7FD4E /* BOTHLaunchEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFC4B8D1F7BECF300A7FD4E /* BOTHLaunchEngine.m */; };
-		2FFC4B941F7E451900A7FD4E /* BOTHPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFC4B931F7E451900A7FD4E /* BOTHPlayerItem.m */; };
-		2FFC4B971F7E4B0D00A7FD4E /* BOTHPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFC4B961F7E4B0D00A7FD4E /* BOTHPlayerView.m */; };
 		B165EF17FE784ACF8EC8DD18 /* libPods-BOSHVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE1A727D28F97D71160C8D5 /* libPods-BOSHVideo.a */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +112,21 @@
 		2F68A1B41F78E7E40048A825 /* BOSHVideoThumbCtx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOSHVideoThumbCtx.h; sourceTree = "<group>"; };
 		2F68A1B51F78E7E40048A825 /* BOSHVideoThumbCtx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOSHVideoThumbCtx.m; sourceTree = "<group>"; };
 		2F68A1B71F78FC520048A825 /* 112169.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 112169.mp4; sourceTree = "<group>"; };
+		2FD8DCE01F95DE600074CBDE /* UIImage+VideoThumb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+VideoThumb.h"; sourceTree = "<group>"; };
+		2FD8DCE11F95DE600074CBDE /* UIImage+VideoThumb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VideoThumb.m"; sourceTree = "<group>"; };
+		2FD8DCFA1F95ECDB0074CBDE /* AVPlayerItem+ThumbImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItem+ThumbImage.h"; sourceTree = "<group>"; };
+		2FD8DCFB1F95ECDB0074CBDE /* AVPlayerItem+ThumbImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayerItem+ThumbImage.m"; sourceTree = "<group>"; };
+		2FD8DCFC1F95ECDB0074CBDE /* AVPlayerItemVideoOutput+UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItemVideoOutput+UIImage.h"; sourceTree = "<group>"; };
+		2FD8DCFD1F95ECDB0074CBDE /* AVPlayerItemVideoOutput+UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayerItemVideoOutput+UIImage.m"; sourceTree = "<group>"; };
+		2FD8DCFE1F95ECDB0074CBDE /* BOTHPlaybackProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTHPlaybackProtocol.h; sourceTree = "<group>"; };
+		2FD8DCFF1F95ECDB0074CBDE /* BOTHPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTHPlayer.h; sourceTree = "<group>"; };
+		2FD8DD001F95ECDB0074CBDE /* BOTHPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTHPlayer.m; sourceTree = "<group>"; };
+		2FD8DD011F95ECDB0074CBDE /* BOTHPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTHPlayerItem.h; sourceTree = "<group>"; };
+		2FD8DD021F95ECDB0074CBDE /* BOTHPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTHPlayerItem.m; sourceTree = "<group>"; };
+		2FD8DD031F95ECDB0074CBDE /* BOTHPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTHPlayerView.h; sourceTree = "<group>"; };
+		2FD8DD041F95ECDB0074CBDE /* BOTHPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTHPlayerView.m; sourceTree = "<group>"; };
+		2FD8DD0D1F9610FC0074CBDE /* BOSHCamaraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BOSHCamaraViewController.h; path = Contollers/BOSHCamaraViewController.h; sourceTree = "<group>"; };
+		2FD8DD0E1F9610FC0074CBDE /* BOSHCamaraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BOSHCamaraViewController.m; path = Contollers/BOSHCamaraViewController.m; sourceTree = "<group>"; };
 		2FE44F3B1F7BD1F600D77635 /* UIView+Geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Geometry.h"; sourceTree = "<group>"; };
 		2FE44F3D1F7BD1F600D77635 /* UIView+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		2FE44F3E1F7BD1F600D77635 /* UIView+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
@@ -145,8 +167,6 @@
 		2FE44F841F7E382500D77635 /* SSProgressBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSProgressBar.m; sourceTree = "<group>"; };
 		2FE44F851F7E382500D77635 /* SSSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSSlider.h; sourceTree = "<group>"; };
 		2FE44F861F7E382500D77635 /* SSSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSSlider.m; sourceTree = "<group>"; };
-		2FE44F881F7E3A2300D77635 /* BOTHPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BOTHPlayer.h; sourceTree = "<group>"; };
-		2FE44F891F7E3A2300D77635 /* BOTHPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BOTHPlayer.m; sourceTree = "<group>"; };
 		2FFC4B811F7BACAE00A7FD4E /* BOTHRichButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTHRichButton.h; sourceTree = "<group>"; };
 		2FFC4B821F7BACAE00A7FD4E /* BOTHRichButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTHRichButton.m; sourceTree = "<group>"; };
 		2FFC4B841F7BEC0100A7FD4E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -155,11 +175,6 @@
 		2FFC4B8A1F7BEC5200A7FD4E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		2FFC4B8C1F7BECF300A7FD4E /* BOTHLaunchEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOTHLaunchEngine.h; path = ../BOTHLaunchEngine.h; sourceTree = "<group>"; };
 		2FFC4B8D1F7BECF300A7FD4E /* BOTHLaunchEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOTHLaunchEngine.m; path = ../BOTHLaunchEngine.m; sourceTree = "<group>"; };
-		2FFC4B8F1F7E43CA00A7FD4E /* BOTHPlaybackProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTHPlaybackProtocol.h; sourceTree = "<group>"; };
-		2FFC4B921F7E451900A7FD4E /* BOTHPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTHPlayerItem.h; sourceTree = "<group>"; };
-		2FFC4B931F7E451900A7FD4E /* BOTHPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTHPlayerItem.m; sourceTree = "<group>"; };
-		2FFC4B951F7E4B0D00A7FD4E /* BOTHPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOTHPlayerView.h; sourceTree = "<group>"; };
-		2FFC4B961F7E4B0D00A7FD4E /* BOTHPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTHPlayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +333,8 @@
 		2F68A1371F750A8B0048A825 /* Camara */ = {
 			isa = PBXGroup;
 			children = (
+				2FD8DD0D1F9610FC0074CBDE /* BOSHCamaraViewController.h */,
+				2FD8DD0E1F9610FC0074CBDE /* BOSHCamaraViewController.m */,
 			);
 			path = Camara;
 			sourceTree = "<group>";
@@ -341,7 +358,7 @@
 		2F68A13B1F750A8B0048A825 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				2FE44F871F7E38AE00D77635 /* BOTHPlayer */,
+				2FD8DCF91F95ECDB0074CBDE /* BOTHAVKit */,
 				2FE44F801F7E382500D77635 /* SSPlayerControl */,
 			);
 			path = VideoPlayer;
@@ -384,6 +401,7 @@
 		2F68A1401F750B220048A825 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				2FD8DD101F9614680074CBDE /* GPUImage */,
 				2F68A15C1F750E4E0048A825 /* Crash */,
 				2F68A1811F750E4F0048A825 /* Push */,
 				2F68A1411F750B220048A825 /* share */,
@@ -449,6 +467,31 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		2FD8DCF91F95ECDB0074CBDE /* BOTHAVKit */ = {
+			isa = PBXGroup;
+			children = (
+				2FD8DCFA1F95ECDB0074CBDE /* AVPlayerItem+ThumbImage.h */,
+				2FD8DCFB1F95ECDB0074CBDE /* AVPlayerItem+ThumbImage.m */,
+				2FD8DCFC1F95ECDB0074CBDE /* AVPlayerItemVideoOutput+UIImage.h */,
+				2FD8DCFD1F95ECDB0074CBDE /* AVPlayerItemVideoOutput+UIImage.m */,
+				2FD8DCFE1F95ECDB0074CBDE /* BOTHPlaybackProtocol.h */,
+				2FD8DCFF1F95ECDB0074CBDE /* BOTHPlayer.h */,
+				2FD8DD001F95ECDB0074CBDE /* BOTHPlayer.m */,
+				2FD8DD011F95ECDB0074CBDE /* BOTHPlayerItem.h */,
+				2FD8DD021F95ECDB0074CBDE /* BOTHPlayerItem.m */,
+				2FD8DD031F95ECDB0074CBDE /* BOTHPlayerView.h */,
+				2FD8DD041F95ECDB0074CBDE /* BOTHPlayerView.m */,
+			);
+			path = BOTHAVKit;
+			sourceTree = "<group>";
+		};
+		2FD8DD101F9614680074CBDE /* GPUImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GPUImage;
+			sourceTree = "<group>";
+		};
 		2FE44F3A1F7BD1F600D77635 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +499,8 @@
 				2FE44F3B1F7BD1F600D77635 /* UIView+Geometry.h */,
 				2FE44F3D1F7BD1F600D77635 /* UIView+Toast.h */,
 				2FE44F3E1F7BD1F600D77635 /* UIView+Toast.m */,
+				2FD8DCE01F95DE600074CBDE /* UIImage+VideoThumb.h */,
+				2FD8DCE11F95DE600074CBDE /* UIImage+VideoThumb.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -586,20 +631,6 @@
 				2FE44F861F7E382500D77635 /* SSSlider.m */,
 			);
 			path = SSPlayerControl;
-			sourceTree = "<group>";
-		};
-		2FE44F871F7E38AE00D77635 /* BOTHPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				2FE44F881F7E3A2300D77635 /* BOTHPlayer.h */,
-				2FE44F891F7E3A2300D77635 /* BOTHPlayer.m */,
-				2FFC4B8F1F7E43CA00A7FD4E /* BOTHPlaybackProtocol.h */,
-				2FFC4B921F7E451900A7FD4E /* BOTHPlayerItem.h */,
-				2FFC4B931F7E451900A7FD4E /* BOTHPlayerItem.m */,
-				2FFC4B951F7E4B0D00A7FD4E /* BOTHPlayerView.h */,
-				2FFC4B961F7E4B0D00A7FD4E /* BOTHPlayerView.m */,
-			);
-			path = BOTHPlayer;
 			sourceTree = "<group>";
 		};
 		CE67269BE5C53F04A60D0B9D /* Pods */ = {
@@ -743,24 +774,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FD8DCE21F95DE600074CBDE /* UIImage+VideoThumb.m in Sources */,
+				2FD8DD071F95ECDB0074CBDE /* BOTHPlayer.m in Sources */,
 				2FE44F401F7BD34B00D77635 /* UIView+Geometry.m in Sources */,
-				2FFC4B941F7E451900A7FD4E /* BOTHPlayerItem.m in Sources */,
-				2FE44F8A1F7E3A2300D77635 /* BOTHPlayer.m in Sources */,
 				2F68A1281F74E98C0048A825 /* ViewController.m in Sources */,
-				2FFC4B971F7E4B0D00A7FD4E /* BOTHPlayerView.m in Sources */,
 				2FE44F431F7BD66C00D77635 /* BOSHHomeLayoutManager.m in Sources */,
+				2FD8DD0B1F960B780074CBDE /* SSProgressBar.m in Sources */,
 				2F0F41C81F7B9E0000194BD1 /* BOSHHomeViewController.m in Sources */,
 				2F68A1251F74E98C0048A825 /* AppDelegate.m in Sources */,
 				2F0F41811F792A2D00194BD1 /* BOSHFomatFactory.m in Sources */,
 				2F68A1AF1F78E1090048A825 /* BOSHGIFContext.m in Sources */,
 				2F0F41B71F7935E800194BD1 /* SSVideoWriter.m in Sources */,
 				2FFC4B831F7BACAE00A7FD4E /* BOTHRichButton.m in Sources */,
+				2FD8DD0F1F9610FC0074CBDE /* BOSHCamaraViewController.m in Sources */,
+				2FD8DD051F95ECDB0074CBDE /* AVPlayerItem+ThumbImage.m in Sources */,
 				2F68A1B31F78E6400048A825 /* BOSHUtils.m in Sources */,
+				2FD8DD0C1F960B7A0074CBDE /* SSSlider.m in Sources */,
+				2FD8DD091F95ECDB0074CBDE /* BOTHPlayerView.m in Sources */,
 				2F68A1B61F78E7E40048A825 /* BOSHVideoThumbCtx.m in Sources */,
 				2FFC4B8E1F7BECF300A7FD4E /* BOTHLaunchEngine.m in Sources */,
 				2F68A1221F74E98C0048A825 /* main.m in Sources */,
+				2FD8DD081F95ECDB0074CBDE /* BOTHPlayerItem.m in Sources */,
 				2F0F41BE1F7B9C7600194BD1 /* BOSHBaseViewController.m in Sources */,
 				2F0F41CB1F7B9E5300194BD1 /* BOTHBlockView.m in Sources */,
+				2FD8DD061F95ECDB0074CBDE /* AVPlayerItemVideoOutput+UIImage.m in Sources */,
+				2FD8DD0A1F960B750074CBDE /* SSPlayControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

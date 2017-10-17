@@ -37,3 +37,6 @@ typedef enum{
     BOSH_ACTION_HELP,
     BOSH_ACTION_LAUNCH_CAMARA,
 };
+
+
+

@@ -14,12 +14,15 @@
 #import "BOSHHomeViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
+#import "BOTHPlayerView.h"
 
 @interface ViewController ()
 {
     UIScrollView *scroll ;BOSHVideoThumbCtx *ctx;
     
     UIImageView *imageView;
+    
+    BOTHPlayerView *playerView;
 }
 @end
 
@@ -36,8 +39,26 @@
     [self.view addSubview:scroll];
     
     
+    
+    
 }
 
+- (IBAction)playAction:(id)sender {
+    
+    if(playerView == nil)
+    {
+        playerView = [[BOTHPlayerView alloc] initWithFrame:CGRectMake(200, 90, (self.view.frame.size.width - 200), (self.view.frame.size.width - 200)*9/16)];
+        [self.view addSubview:playerView];
+    }
+    
+    AVAsset *com = [AVAsset assetWithURL:[[NSBundle mainBundle] URLForResource:@"112169" withExtension:@"mp4"]];
+    
+    AVPlayerItem * playItem = [AVPlayerItem playerItemWithURL:[[NSBundle mainBundle] URLForResource:@"112169" withExtension:@"mp4"]];
+    playItem = [AVPlayerItem playerItemWithAsset:com];
+    
+    [playerView playWithItem:playItem];
+    [playerView play];
+}
 
 - (IBAction)click:(id)sender {
     

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class AVPlayerItem;
+@class AVAsset;
 
 @interface BOTHPlayerItem : NSObject
 
@@ -25,6 +27,6 @@
 
 @property (nonatomic, weak) id priv;
 
-+ (BOTHPlayerItem *)defaultItem;
+-  (AVPlayerItem *)playItem;
 
 @end

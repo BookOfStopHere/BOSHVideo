@@ -107,7 +107,7 @@
 {
     switch (type) {
         case BOSH_ACTION_JOIN_LONG_PICTURE: return @"拼长图";
-         case BOSH_ACTION_CREATE_GIF: return @"生成Gif";
+       case BOSH_ACTION_CREATE_GIF: return @"生成Gif";
         case BOSH_ACTION_EDIT_VIDEO: return @"视频剪辑";
         case BOSH_ACTION_HELP: return @"帮助说明";
         default:
