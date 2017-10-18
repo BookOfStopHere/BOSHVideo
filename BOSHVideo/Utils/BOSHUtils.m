@@ -31,4 +31,23 @@
     return NSHomeDirectory();
 }
 
+
++ (NSString *)currentTimeYMDHMS
+{
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit |
+    NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    
+    NSDateComponents *comps  = [calendar components:unitFlags fromDate:[NSDate date]];
+    
+    int year = (int)[comps year];
+    int month =  (int)[comps month];
+    int day = (int) [comps day];
+    int hour =  (int)[comps hour];
+    int min =  (int)[comps minute];
+    int sec =  (int)[comps second];
+    
+    return [NSString stringWithFormat:@"%d-%d-%d-%d-%d-%d",year,month,day,hour,min,sec];
+}
 @end

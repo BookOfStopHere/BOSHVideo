@@ -15,4 +15,5 @@
 + (NSString *)documentPath;
 + (NSString *)homePath;
 
++ (NSString *)currentTimeYMDHMS;
 @end

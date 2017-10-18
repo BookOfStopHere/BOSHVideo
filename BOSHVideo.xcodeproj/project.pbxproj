@@ -69,13 +69,10 @@
 		2FFC4B891F7BEC3D00A7FD4E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC4B881F7BEC3D00A7FD4E /* JavaScriptCore.framework */; };
 		2FFC4B8B1F7BEC5200A7FD4E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFC4B8A1F7BEC5200A7FD4E /* ImageIO.framework */; };
 		2FFC4B8E1F7BECF300A7FD4E /* BOTHLaunchEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFC4B8D1F7BECF300A7FD4E /* BOTHLaunchEngine.m */; };
-		B165EF17FE784ACF8EC8DD18 /* libPods-BOSHVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE1A727D28F97D71160C8D5 /* libPods-BOSHVideo.a */; };
+		647B5EE5EB14124B26417500 /* libPods-BOSHVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CD2618CE62C69449E641F0 /* libPods-BOSHVideo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0AFCD2D8617179991AC1C180 /* Pods-BOSHVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BOSHVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BOSHVideo/Pods-BOSHVideo.release.xcconfig"; sourceTree = "<group>"; };
-		0CE1A727D28F97D71160C8D5 /* libPods-BOSHVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BOSHVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		29E340CDC0BB5BDE2EC6F438 /* Pods-BOSHVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BOSHVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BOSHVideo/Pods-BOSHVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		2F0F417A1F79035300194BD1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2F0F417C1F79036000194BD1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		2F0F417F1F792A2D00194BD1 /* BOSHFomatFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOSHFomatFactory.h; sourceTree = "<group>"; };
@@ -127,6 +124,29 @@
 		2FD8DD041F95ECDB0074CBDE /* BOTHPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOTHPlayerView.m; sourceTree = "<group>"; };
 		2FD8DD0D1F9610FC0074CBDE /* BOSHCamaraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BOSHCamaraViewController.h; path = Contollers/BOSHCamaraViewController.h; sourceTree = "<group>"; };
 		2FD8DD0E1F9610FC0074CBDE /* BOSHCamaraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BOSHCamaraViewController.m; path = Contollers/BOSHCamaraViewController.m; sourceTree = "<group>"; };
+		2FD8DD131F9721A40074CBDE /* GLProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
+		2FD8DD141F9721A40074CBDE /* GLProgram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
+		2FD8DD151F9721A40074CBDE /* GPUImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImage.h; sourceTree = "<group>"; };
+		2FD8DD161F9721A40074CBDE /* GPUImageFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageFilter.h; sourceTree = "<group>"; };
+		2FD8DD171F9721A40074CBDE /* GPUImageFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageFilter.m; sourceTree = "<group>"; };
+		2FD8DD181F9721A40074CBDE /* GPUImageMovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageMovie.h; sourceTree = "<group>"; };
+		2FD8DD191F9721A40074CBDE /* GPUImageMovie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageMovie.m; sourceTree = "<group>"; };
+		2FD8DD1A1F9721A40074CBDE /* GPUImageMovieWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageMovieWriter.h; sourceTree = "<group>"; };
+		2FD8DD1B1F9721A40074CBDE /* GPUImageMovieWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageMovieWriter.m; sourceTree = "<group>"; };
+		2FD8DD1C1F9721A40074CBDE /* GPUImageOpenGLESContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageOpenGLESContext.h; sourceTree = "<group>"; };
+		2FD8DD1D1F9721A40074CBDE /* GPUImageOpenGLESContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageOpenGLESContext.m; sourceTree = "<group>"; };
+		2FD8DD1E1F9721A40074CBDE /* GPUImageOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageOutput.h; sourceTree = "<group>"; };
+		2FD8DD1F1F9721A40074CBDE /* GPUImageOutput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageOutput.m; sourceTree = "<group>"; };
+		2FD8DD201F9721A40074CBDE /* GPUImagePicture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImagePicture.h; sourceTree = "<group>"; };
+		2FD8DD211F9721A40074CBDE /* GPUImagePicture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImagePicture.m; sourceTree = "<group>"; };
+		2FD8DD221F9721A40074CBDE /* GPUImageRawData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageRawData.h; sourceTree = "<group>"; };
+		2FD8DD231F9721A40074CBDE /* GPUImageRawData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageRawData.m; sourceTree = "<group>"; };
+		2FD8DD241F9721A40074CBDE /* GPUImageRotationFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageRotationFilter.h; sourceTree = "<group>"; };
+		2FD8DD251F9721A40074CBDE /* GPUImageRotationFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageRotationFilter.m; sourceTree = "<group>"; };
+		2FD8DD261F9721A40074CBDE /* GPUImageVideoCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageVideoCamera.h; sourceTree = "<group>"; };
+		2FD8DD271F9721A40074CBDE /* GPUImageVideoCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageVideoCamera.m; sourceTree = "<group>"; };
+		2FD8DD281F9721A40074CBDE /* GPUImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageView.h; sourceTree = "<group>"; };
+		2FD8DD291F9721A40074CBDE /* GPUImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageView.m; sourceTree = "<group>"; };
 		2FE44F3B1F7BD1F600D77635 /* UIView+Geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Geometry.h"; sourceTree = "<group>"; };
 		2FE44F3D1F7BD1F600D77635 /* UIView+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		2FE44F3E1F7BD1F600D77635 /* UIView+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
@@ -175,6 +195,9 @@
 		2FFC4B8A1F7BEC5200A7FD4E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		2FFC4B8C1F7BECF300A7FD4E /* BOTHLaunchEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOTHLaunchEngine.h; path = ../BOTHLaunchEngine.h; sourceTree = "<group>"; };
 		2FFC4B8D1F7BECF300A7FD4E /* BOTHLaunchEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOTHLaunchEngine.m; path = ../BOTHLaunchEngine.m; sourceTree = "<group>"; };
+		81CD2618CE62C69449E641F0 /* libPods-BOSHVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BOSHVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E2800FF06E9E71A16C3D74 /* Pods-BOSHVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BOSHVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BOSHVideo/Pods-BOSHVideo.debug.xcconfig"; sourceTree = "<group>"; };
+		D5F901F4E3CB15478FF09157 /* Pods-BOSHVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BOSHVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BOSHVideo/Pods-BOSHVideo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,13 +230,22 @@
 				2F68A1831F750E4F0048A825 /* Bugly.framework in Frameworks */,
 				2FE44F6F1F7BE71F00D77635 /* ShareSDKExtension.framework in Frameworks */,
 				2FE44F731F7BE71F00D77635 /* EvernoteConnector.framework in Frameworks */,
-				B165EF17FE784ACF8EC8DD18 /* libPods-BOSHVideo.a in Frameworks */,
+				647B5EE5EB14124B26417500 /* libPods-BOSHVideo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1D861A5B26BA3E8D1F9715 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2E2800FF06E9E71A16C3D74 /* Pods-BOSHVideo.debug.xcconfig */,
+				D5F901F4E3CB15478FF09157 /* Pods-BOSHVideo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2F0F417E1F792A1200194BD1 /* VideoCodec */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +313,7 @@
 				2F68A11F1F74E98C0048A825 /* BOSHVideo */,
 				2F68A11E1F74E98C0048A825 /* Products */,
 				2F68A1A01F750E880048A825 /* Frameworks */,
-				CE67269BE5C53F04A60D0B9D /* Pods */,
+				1A1D861A5B26BA3E8D1F9715 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -401,7 +433,7 @@
 		2F68A1401F750B220048A825 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				2FD8DD101F9614680074CBDE /* GPUImage */,
+				2FD8DD121F9721A40074CBDE /* GPUImage */,
 				2F68A15C1F750E4E0048A825 /* Crash */,
 				2F68A1811F750E4F0048A825 /* Push */,
 				2F68A1411F750B220048A825 /* share */,
@@ -453,7 +485,7 @@
 				2F68A1A51F750E940048A825 /* libz.tbd */,
 				2F68A1A31F750E8E0048A825 /* Security.framework */,
 				2F68A1A11F750E880048A825 /* SystemConfiguration.framework */,
-				0CE1A727D28F97D71160C8D5 /* libPods-BOSHVideo.a */,
+				81CD2618CE62C69449E641F0 /* libPods-BOSHVideo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -485,9 +517,32 @@
 			path = BOTHAVKit;
 			sourceTree = "<group>";
 		};
-		2FD8DD101F9614680074CBDE /* GPUImage */ = {
+		2FD8DD121F9721A40074CBDE /* GPUImage */ = {
 			isa = PBXGroup;
 			children = (
+				2FD8DD131F9721A40074CBDE /* GLProgram.h */,
+				2FD8DD141F9721A40074CBDE /* GLProgram.m */,
+				2FD8DD151F9721A40074CBDE /* GPUImage.h */,
+				2FD8DD161F9721A40074CBDE /* GPUImageFilter.h */,
+				2FD8DD171F9721A40074CBDE /* GPUImageFilter.m */,
+				2FD8DD181F9721A40074CBDE /* GPUImageMovie.h */,
+				2FD8DD191F9721A40074CBDE /* GPUImageMovie.m */,
+				2FD8DD1A1F9721A40074CBDE /* GPUImageMovieWriter.h */,
+				2FD8DD1B1F9721A40074CBDE /* GPUImageMovieWriter.m */,
+				2FD8DD1C1F9721A40074CBDE /* GPUImageOpenGLESContext.h */,
+				2FD8DD1D1F9721A40074CBDE /* GPUImageOpenGLESContext.m */,
+				2FD8DD1E1F9721A40074CBDE /* GPUImageOutput.h */,
+				2FD8DD1F1F9721A40074CBDE /* GPUImageOutput.m */,
+				2FD8DD201F9721A40074CBDE /* GPUImagePicture.h */,
+				2FD8DD211F9721A40074CBDE /* GPUImagePicture.m */,
+				2FD8DD221F9721A40074CBDE /* GPUImageRawData.h */,
+				2FD8DD231F9721A40074CBDE /* GPUImageRawData.m */,
+				2FD8DD241F9721A40074CBDE /* GPUImageRotationFilter.h */,
+				2FD8DD251F9721A40074CBDE /* GPUImageRotationFilter.m */,
+				2FD8DD261F9721A40074CBDE /* GPUImageVideoCamera.h */,
+				2FD8DD271F9721A40074CBDE /* GPUImageVideoCamera.m */,
+				2FD8DD281F9721A40074CBDE /* GPUImageView.h */,
+				2FD8DD291F9721A40074CBDE /* GPUImageView.m */,
 			);
 			path = GPUImage;
 			sourceTree = "<group>";
@@ -633,15 +688,6 @@
 			path = SSPlayerControl;
 			sourceTree = "<group>";
 		};
-		CE67269BE5C53F04A60D0B9D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				29E340CDC0BB5BDE2EC6F438 /* Pods-BOSHVideo.debug.xcconfig */,
-				0AFCD2D8617179991AC1C180 /* Pods-BOSHVideo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -649,12 +695,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F68A1341F74E98C0048A825 /* Build configuration list for PBXNativeTarget "BOSHVideo" */;
 			buildPhases = (
-				579EC1027259044C35F4FC1F /* Check Pods Manifest.lock */,
+				9A12DCBE40424381E9032E74 /* [CP] Check Pods Manifest.lock */,
 				2F68A1191F74E98C0048A825 /* Sources */,
 				2F68A11A1F74E98C0048A825 /* Frameworks */,
 				2F68A11B1F74E98C0048A825 /* Resources */,
-				7D0E387A21BF1CCEF2194C6E /* Embed Pods Frameworks */,
-				6AE4DF971CB516CD2A9CC47B /* Copy Pods Resources */,
+				A1F54A0FE7CE8192AE243C6A /* [CP] Embed Pods Frameworks */,
+				F1314E66B1A979561343CCDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -722,49 +768,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		579EC1027259044C35F4FC1F /* Check Pods Manifest.lock */ = {
+		9A12DCBE40424381E9032E74 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BOSHVideo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6AE4DF971CB516CD2A9CC47B /* Copy Pods Resources */ = {
+		A1F54A0FE7CE8192AE243C6A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BOSHVideo/Pods-BOSHVideo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7D0E387A21BF1CCEF2194C6E /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BOSHVideo/Pods-BOSHVideo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1314E66B1A979561343CCDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BOSHVideo/Pods-BOSHVideo-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BOSHVideo/Pods-BOSHVideo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -918,7 +975,7 @@
 		};
 		2F68A1351F74E98C0048A825 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29E340CDC0BB5BDE2EC6F438 /* Pods-BOSHVideo.debug.xcconfig */;
+			baseConfigurationReference = B2E2800FF06E9E71A16C3D74 /* Pods-BOSHVideo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -952,7 +1009,7 @@
 		};
 		2F68A1361F74E98C0048A825 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AFCD2D8617179991AC1C180 /* Pods-BOSHVideo.release.xcconfig */;
+			baseConfigurationReference = D5F901F4E3CB15478FF09157 /* Pods-BOSHVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

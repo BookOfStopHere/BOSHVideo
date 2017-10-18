@@ -98,12 +98,21 @@ static void *AVCDVPlayerViewControllerRateObservationContext = &AVCDVPlayerViewC
     if(self.isPlaying == NO)
     {
         //plaing to End
-        [self.player seekToTime:self.player.currentItem.currentTime
-                toleranceBefore:CMTimeMakeWithSeconds(0.1, NSEC_PER_SEC)
-                 toleranceAfter:CMTimeMakeWithSeconds(0.1, NSEC_PER_SEC)
-              completionHandler:^(BOOL finished) {
-                          [self.player play];
-              }];
+        if(_seekToZeroBeforePlaying)
+        {
+            [self.player seekToTime:self.player.currentItem.currentTime
+                    toleranceBefore:CMTimeMakeWithSeconds(0.1, NSEC_PER_SEC)
+                     toleranceAfter:CMTimeMakeWithSeconds(0.1, NSEC_PER_SEC)
+                  completionHandler:^(BOOL finished) {
+                              [self.player play];
+                  }];
+            
+            _seekToZeroBeforePlaying = NO;
+        }
+        else
+        {
+            [self.player play];
+        }
     }
 }
 

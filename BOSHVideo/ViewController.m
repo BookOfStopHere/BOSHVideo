@@ -15,6 +15,7 @@
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
 #import "BOTHPlayerView.h"
+#import "BOSHCamaraViewController.h"
 
 @interface ViewController ()
 {
@@ -41,6 +42,10 @@
     
     
     
+}
+- (IBAction)launchCamera:(id)sender {
+    BOSHCamaraViewController * cam = [[BOSHCamaraViewController alloc] init];
+    [self presentViewController:cam animated:YES completion:nil];
 }
 
 - (IBAction)playAction:(id)sender {
