@@ -24,6 +24,8 @@
 
 + (BOOL) launchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    return YES;
 /**初始化ShareSDK应用
  @param activePlatforms
  使用的分享平台集合

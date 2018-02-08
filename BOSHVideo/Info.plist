@@ -39,8 +39,19 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>访问相册</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>请允许使用图片库</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FoxboroItalic.ttf</string>
+		<string>Degrassi.ttf</string>
+		<string>msyh.ttf</string>
+		<string>tu2k3do3.ttf</string>
+		<string>Carolingia.ttf</string>
+		<string>xingshu.ttf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -48,8 +59,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

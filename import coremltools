@@ -1,0 +1,4 @@
+import coremltools
+coreml_model = coremltools.converters.caffe.convert('fused.ply')
+
+coremltools.utils.save_spec(coreml_model, 'my_model.mlmodel')

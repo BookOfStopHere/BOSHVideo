@@ -7,7 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BOSHNavigationBar.h"
+#import "UIViewController+BOSHAlert.h"
 @interface BOSHBaseViewController : UIViewController
+@property (nonatomic, strong) BOSHNavigationBar *headerBar;
+@property (nonatomic, assign) BOOL headerBarHidden;
 
+
+- (instancetype)initWithFrame:(CGRect)frame;
+
+- (void)addApplicationObserver;
+- (void)removeApplicationObserver;
+- (void)applicationWillResignActive:(NSNotification *)notice;
+- (void)applicationDidEnterBackground:(NSNotification *)notice;
+- (void)applicationWillEnterForeground:(NSNotification *)notice;
+- (void)applicationDidBecomeActive:(NSNotification *)notice;
+
+
+- (void)addBOSHChildViewController:(UIViewController *)childController;
+
+- (void)dismissSelf;
 @end

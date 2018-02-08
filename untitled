@@ -1,0 +1,22 @@
+
+
+系统转场：
+
+AVVideoComposition--->[<id <AVVideoCompositionInstruction>>] ( @[AVVideoCompositionInstruction/AVMutableVideoCompositionInstruction])---->@[AVVideoCompositionLayerInstruction/AVMutableVideoCompositionLayerInstruction]
+
+
+//转场动画就靠这个
+- (void)setTransformRampFromStartTransform:(CGAffineTransform)startTransform toEndTransform:(CGAffineTransform)endTransform timeRange:(CMTimeRange)timeRange;
+- (void)setTransform:(CGAffineTransform)transform atTime:(CMTime)time;
+- (void)setOpacityRampFromStartOpacity:(float)startOpacity toEndOpacity:(float)endOpacity timeRange:(CMTimeRange)timeRange;
+- (void)setOpacity:(float)opacity atTime:(CMTime)time;
+- (void)setCropRectangleRampFromStartCropRectangle:(CGRect)startCropRectangle toEndCropRectangle:(CGRect)endCropRectangle timeRange:(CMTimeRange)timeRange NS_AVAILABLE(10_9, 7_0);
+- (void)setCropRectangle:(CGRect)cropRectangle atTime:(CMTime)time NS_AVAILABLE(10_9, 7_0);
+
+
+定制转场：
+
+/* indicates the custom compositor class to use. If nil, the default, internal video compositor is used */
+@property (nonatomic, retain, nullable) Class<AVVideoCompositing> customVideoCompositorClass NS_AVAILABLE(10_9, 7_0);
+
+需要自己实现 <AVVideoCompositing> protocol,此处苹果官方给出了栗子

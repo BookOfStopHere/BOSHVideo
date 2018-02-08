@@ -13,5 +13,4 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @property (weak, nonatomic) IBOutlet UILabel *textLab;
-
 @end

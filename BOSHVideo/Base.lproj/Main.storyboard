@@ -15,8 +15,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="h4H-qF-dfq"/>
+                        <viewControllerLayoutGuide type="bottom" id="RZK-Zf-Icd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -53,19 +53,146 @@
                                     <action selector="click2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQF-nD-gzA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVO-e0-1PF">
+                                <rect key="frame" x="26" y="140" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.39162758355077143" blue="0.53329838268876784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I5i-P2-PqS"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Awy-zX-4g4">
+                                <rect key="frame" x="146" y="40" width="225" height="31"/>
+                                <color key="backgroundColor" red="0.906234380469082" green="0.97334109604473373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.027707338519592062" blue="0.050285008361419137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="changeVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="e6z-Jx-ewI"/>
+                                </connections>
+                            </slider>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fk-qq-u8W">
+                                <rect key="frame" x="5" y="447" width="365" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="jCg-AA-p9i"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hmn-1u-9nS"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-8H-KQg">
+                                <rect key="frame" x="89" y="140" width="49" height="30"/>
+                                <color key="backgroundColor" red="0.41686306297269804" green="1" blue="0.74485661652235746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Thumb"/>
+                                <connections>
+                                    <action selector="thumbnailAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d77-7x-clW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TW-dN-hOE">
+                                <rect key="frame" x="26" y="190" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.91375050356699128" green="1" blue="0.41236238794914559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="TComp"/>
+                                <connections>
+                                    <action selector="testCompEncloseComp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYs-oX-opx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E4-rt-Viy">
+                                <rect key="frame" x="27" y="247" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.52922758968950245" blue="0.31890502101729712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="LongV"/>
+                                <connections>
+                                    <action selector="testLongVideoClip" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vW-2u-0l2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ0-Kx-lvE">
+                                <rect key="frame" x="92" y="190" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.19697854173085583" blue="0.28369598204394553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="G_OU"/>
+                                <connections>
+                                    <action selector="exportGPUImageVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s7m-K2-0h2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrG-91-HyP">
+                                <rect key="frame" x="93" y="247" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.45893066439631747" green="0.8771858808290155" blue="0.27887220812578795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Brower"/>
+                                <connections>
+                                    <action selector="pictureViewer" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMs-4N-GJX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svq-qW-BjR">
+                                <rect key="frame" x="167" y="90" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8771858808290155" green="0.23496251848476091" blue="0.10646118255963187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="PSle"/>
+                                <connections>
+                                    <action selector="pictureVideoSlected" destination="BYZ-38-t0r" eventType="touchUpInside" id="RHd-NI-h3M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJn-tH-THZ">
+                                <rect key="frame" x="155" y="140" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85554077378503424" green="0.40644088040398529" blue="0.8771858808290155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Effect"/>
+                                <connections>
+                                    <action selector="testEffectToVideo" destination="BYZ-38-t0r" eventType="touchUpInside" id="SH0-xo-Itd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAu-F8-298">
+                                <rect key="frame" x="209" y="90" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8771858808290155" green="0.24540688190246945" blue="0.70198239144843755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ExLongVG"/>
+                                <connections>
+                                    <action selector="exportLongMovie" destination="BYZ-38-t0r" eventType="touchUpInside" id="7HH-8P-nwv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUy-7V-Lxd">
+                                <rect key="frame" x="209" y="140" width="81" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58104929223703106" green="1" blue="0.5493779507447194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="AddGif"/>
+                                <connections>
+                                    <action selector="addGifOverlayer" destination="BYZ-38-t0r" eventType="touchUpInside" id="cef-Mf-WNj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzP-27-hBL">
+                                <rect key="frame" x="153" y="190" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="FireEff"/>
+                                <connections>
+                                    <action selector="addFireEffect" destination="BYZ-38-t0r" eventType="touchUpInside" id="98b-aU-u2C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Awy-zX-4g4" firstAttribute="leading" secondItem="Avq-of-hlD" secondAttribute="trailing" constant="10" id="BQV-Ud-JPo"/>
                             <constraint firstItem="ClX-Ag-IYS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="D90-p5-nHI"/>
+                            <constraint firstItem="Awy-zX-4g4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="DZa-9g-NZy"/>
+                            <constraint firstItem="8TW-dN-hOE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="FEh-2y-IJp"/>
+                            <constraint firstItem="8TW-dN-hOE" firstAttribute="top" secondItem="bVO-e0-1PF" secondAttribute="bottom" constant="20" id="K3P-Xm-fA1"/>
+                            <constraint firstAttribute="trailing" secondItem="1fk-qq-u8W" secondAttribute="trailing" constant="5" id="L2O-bg-z7Y"/>
+                            <constraint firstItem="RZK-Zf-Icd" firstAttribute="top" secondItem="1fk-qq-u8W" secondAttribute="bottom" constant="20" id="L4k-XB-alz"/>
+                            <constraint firstItem="Z2z-8H-KQg" firstAttribute="leading" secondItem="bVO-e0-1PF" secondAttribute="trailing" constant="20" id="Mrd-xC-zJV"/>
                             <constraint firstItem="WXO-lh-6Zt" firstAttribute="leading" secondItem="I0R-pZ-2SA" secondAttribute="trailing" constant="20" id="NPh-O0-AQv"/>
                             <constraint firstItem="WXO-lh-6Zt" firstAttribute="top" secondItem="Avq-of-hlD" secondAttribute="bottom" constant="20" id="de3-hS-bTC"/>
+                            <constraint firstItem="1fk-qq-u8W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="eUd-rQ-AaO"/>
+                            <constraint firstItem="Awy-zX-4g4" firstAttribute="top" secondItem="h4H-qF-dfq" secondAttribute="bottom" constant="20" id="fzA-rp-eab"/>
                             <constraint firstItem="I0R-pZ-2SA" firstAttribute="top" secondItem="ClX-Ag-IYS" secondAttribute="bottom" constant="20" id="hTd-Ju-fFD"/>
                             <constraint firstItem="Avq-of-hlD" firstAttribute="leading" secondItem="ClX-Ag-IYS" secondAttribute="trailing" constant="20" id="iVu-TU-CkZ"/>
                             <constraint firstItem="ClX-Ag-IYS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="kqK-ej-bYS"/>
-                            <constraint firstItem="Avq-of-hlD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="qrd-bA-of2"/>
+                            <constraint firstItem="bVO-e0-1PF" firstAttribute="top" secondItem="I0R-pZ-2SA" secondAttribute="bottom" constant="20" id="mHp-Sm-Emq"/>
+                            <constraint firstItem="Avq-of-hlD" firstAttribute="top" secondItem="h4H-qF-dfq" secondAttribute="bottom" constant="20" id="qrd-bA-of2"/>
+                            <constraint firstItem="bVO-e0-1PF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="s1B-Gn-YIZ"/>
                             <constraint firstItem="I0R-pZ-2SA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="uA9-ZS-Llp"/>
+                            <constraint firstItem="Z2z-8H-KQg" firstAttribute="top" secondItem="WXO-lh-6Zt" secondAttribute="bottom" constant="20" id="zNL-Es-ubp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="thumbScroll" destination="1fk-qq-u8W" id="I5z-6c-PQd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

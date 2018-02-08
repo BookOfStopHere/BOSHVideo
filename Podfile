@@ -9,9 +9,18 @@ platform :ios, '8.0'
 #inhibit_all_warnings!
 
 target 'BOSHVideo' do
-	pod 'SVProgressHUD'
-	pod 'SDWebImage', '3.7.6'
+#	pod 'SVProgressHUD'
+	pod 'SDWebImage', '~> 3.7.6'
 	pod 'GPUImage'
+	pod 'MMDrawerController', '~> 0.5.7'
+#	pod "MWPhotoBrowser"
+	pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'FLAnimatedImage', '~> 1.0'
+    pod 'Masonry'
+    pod 'AFNetworking', '~> 3.0'
+    pod 'YYModel'
+#    pod 'FCAlertView'
+    pod 'NYAlertViewController'
 end
 
 post_install do |installer_representation|

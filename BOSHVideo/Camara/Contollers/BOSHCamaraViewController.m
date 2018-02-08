@@ -67,9 +67,9 @@
 - (void)initCamara
 {
     videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480 cameraPosition:devicePosition];
-    videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
-    videoCamera.horizontallyMirrorFrontFacingCamera = NO;
-    videoCamera.horizontallyMirrorRearFacingCamera = NO;
+//    videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
+//    videoCamera.horizontallyMirrorFrontFacingCamera = NO;
+//    videoCamera.horizontallyMirrorRearFacingCamera = NO;
     
     
     [videoCamera addTarget:preView];
@@ -80,8 +80,8 @@
     NSString *pathToMovie = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.mp4",[BOSHUtils currentTimeYMDHMS]]];
     unlink([pathToMovie UTF8String]); // If a file already exists, AVAssetWriter won't let you record new frames, so delete the old movie
     movieURL = [NSURL fileURLWithPath:pathToMovie];
-    movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(480, 640) fileType:AVFileTypeMPEG4 outputSettings:nil];
-    movieWriter.encodingLiveVideo = YES;
+//    movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(480, 640) fileType:AVFileTypeMPEG4 outputSettings:nil];
+//    movieWriter.encodingLiveVideo = YES;
 }
 
 - (void)initPreview
@@ -106,13 +106,13 @@
 - (void)startCapture
 {
     double delayToStartRecording = 0.0;
-    [self initWritter];
+    [self initWritter];//AVWriter 一次拍摄只能是一个实例 (这里需要考察一下 是否为)
     [videoCamera addTarget:movieWriter];
     dispatch_time_t startTime = dispatch_time(DISPATCH_TIME_NOW, delayToStartRecording * NSEC_PER_SEC);
     dispatch_after(startTime, dispatch_get_main_queue(), ^(void){
         NSLog(@"Start recording");
         
-        videoCamera.audioEncodingTarget = movieWriter;
+//        videoCamera.audioEncodingTarget = movieWriter;
         [movieWriter startRecording];
                 
         double delayInSeconds = 5.0;
@@ -120,7 +120,7 @@
         dispatch_after(stopTime, dispatch_get_main_queue(), ^(void){
             
             [videoCamera removeTarget:movieWriter];
-            videoCamera.audioEncodingTarget = nil;
+//            videoCamera.audioEncodingTarget = nil;
             [movieWriter finishRecording];
             NSLog(@"Movie completed");
             
@@ -151,12 +151,12 @@
 //turn on or off torch
 - (void)turnTorchOnAndOff
 {
-    if(videoCamera.inputCamera.isTorchAvailable && devicePosition == AVCaptureDevicePositionBack)
-    {
-        [videoCamera.inputCamera lockForConfiguration:nil];
-        [videoCamera.inputCamera setTorchMode:videoCamera.inputCamera.torchActive ? AVCaptureTorchModeOff : AVCaptureTorchModeOn];
-        [videoCamera.inputCamera unlockForConfiguration];
-    }
+//    if(videoCamera.inputCamera.isTorchAvailable && devicePosition == AVCaptureDevicePositionBack)
+//    {
+//        [videoCamera.inputCamera lockForConfiguration:nil];
+//        [videoCamera.inputCamera setTorchMode:videoCamera.inputCamera.torchActive ? AVCaptureTorchModeOff : AVCaptureTorchModeOn];
+//        [videoCamera.inputCamera unlockForConfiguration];
+//    }
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -188,7 +188,7 @@
             orient = fromInterfaceOrientation;
             break;
     }
-    videoCamera.outputImageOrientation = orient;
+//    videoCamera.outputImageOrientation = orient;
 }
 
 - (void)didReceiveMemoryWarning
